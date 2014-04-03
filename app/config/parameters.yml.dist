@@ -2,8 +2,8 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     localhost
     database_port:     ~
-    database_name:     ~
-    database_user:     ~
+    database_name:     indexes_dev
+    database_user:     root
     database_password: ~
 
     mailer_transport:  ~
