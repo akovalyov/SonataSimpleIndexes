@@ -31,8 +31,6 @@
 
         "twig/extensions":                          "~1.0",
 
-        "friendsofsymfony/elastica-bundle":         "3.0.*@dev",
-
         "mopa/bootstrap-bundle":                    "~2.2@dev",
 
         "sonata-project/admin-bundle":              "~2.2",
@@ -60,22 +58,20 @@
     },
      "scripts": {
         "post-install-cmd": [
-            "Knp\\RadBundle\\Composer\\ScriptHandler::installParametersFile",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
-        "post-update-cmd": [
-            "Knp\\RadBundle\\Composer\\ScriptHandler::installParametersFile",
+         "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ]
-    },
+     },
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

@@ -3,7 +3,6 @@ imports:
     - { resource: security.yml }
     - { resource: sonata.yml }
     - { resource: third_party.yml }
-#    - { resource: elasticsearch.yml }
     - { resource: ../../vendor/knplabs/doctrine-behaviors/config/orm-services.yml }
 framework:
     #esi:             ~

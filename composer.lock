@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "662d95b480f101fdedeed93fe22302fa",
+    "hash": "5855937251178d557e9edd63f3fd766d",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -807,89 +807,6 @@
             "time": "2014-02-08 16:35:09"
         },
         {
-            "name": "friendsofsymfony/elastica-bundle",
-            "version": "dev-master",
-            "target-dir": "FOS/ElasticaBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSElasticaBundle.git",
-                "reference": "ff95945819939ced9f2e1a48bac65ec4f10f83df"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSElasticaBundle/zipball/ff95945819939ced9f2e1a48bac65ec4f10f83df",
-                "reference": "ff95945819939ced9f2e1a48bac65ec4f10f83df",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "psr/log": "~1.0",
-                "ruflin/elastica": ">=0.20, <1.1-dev",
-                "symfony/console": "~2.1",
-                "symfony/form": "~2.1",
-                "symfony/framework-bundle": "~2.3",
-                "symfony/property-access": "~2.2"
-            },
-            "require-dev": {
-                "doctrine/mongodb-odm": "1.0.*@dev",
-                "doctrine/orm": ">=2.2,<2.5-dev",
-                "knplabs/knp-components": "1.2.*",
-                "pagerfanta/pagerfanta": "1.0.*@dev",
-                "propel/propel1": "1.6.*",
-                "symfony/expression-language": "2.4.*@dev"
-            },
-            "suggest": {
-                "doctrine/mongodb-odm": "1.0.*@dev",
-                "doctrine/orm": ">=2.2,<2.5-dev",
-                "knplabs/knp-components": "1.2.*",
-                "pagerfanta/pagerfanta": "1.0.*@dev",
-                "propel/propel1": "1.6.*",
-                "symfony/expression-language": "2.4.*@dev"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "FOS\\ElasticaBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thibault Duplessis",
-                    "email": "thibault.duplessis@gmail.com",
-                    "homepage": "http://ornicar.github.com"
-                },
-                {
-                    "name": "Jeremy Mikola",
-                    "email": "jmikola@gmail.com",
-                    "homepage": "http://jmikola.net"
-                },
-                {
-                    "name": "Richard Miller",
-                    "email": "richard.miller@limethinking.co.uk"
-                }
-            ],
-            "description": "Elasticsearch PHP integration for your Symfony2 project using Elastica",
-            "homepage": "https://github.com/FriendsOfSymfony/FOSElasticaBundle",
-            "keywords": [
-                "doctrine2",
-                "elastica",
-                "elasticsearch",
-                "mongodb",
-                "propel",
-                "search"
-            ],
-            "time": "2014-04-01 21:47:47"
-        },
-        {
             "name": "fzaninotto/faker",
             "version": "v1.3.0",
             "source": {
@@ -934,6 +851,58 @@
                 "fixtures"
             ],
             "time": "2013-12-16 21:56:48"
+        },
+        {
+            "name": "incenteev/composer-parameter-handler",
+            "version": "dev-master",
+            "target-dir": "Incenteev/ParameterHandler",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Incenteev/ParameterHandler.git",
+                "reference": "f6b98615a403a0f684eb15581ed9f6e93709169d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Incenteev/ParameterHandler/zipball/f6b98615a403a0f684eb15581ed9f6e93709169d",
+                "reference": "f6b98615a403a0f684eb15581ed9f6e93709169d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/yaml": "~2.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpspec/prophecy-phpunit": "~1.0",
+                "symfony/filesystem": "~2.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Incenteev\\ParameterHandler": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                }
+            ],
+            "description": "Composer script handling your ignored parameter file",
+            "homepage": "https://github.com/Incenteev/ParameterHandler",
+            "keywords": [
+                "parameters management"
+            ],
+            "time": "2014-03-11 08:44:13"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -1397,49 +1366,6 @@
             "time": "2013-07-19 00:03:27"
         },
         {
-            "name": "marmelab/sonata-elastica-bundle",
-            "version": "dev-master",
-            "target-dir": "Marmelab/SonataElasticaBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/marmelab/SonataElasticaBundle.git",
-                "reference": "055c8ca20fd09ca107cfde1dd4f409ffdba070ee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/marmelab/SonataElasticaBundle/zipball/055c8ca20fd09ca107cfde1dd4f409ffdba070ee",
-                "reference": "055c8ca20fd09ca107cfde1dd4f409ffdba070ee",
-                "shasum": ""
-            },
-            "require": {
-                "friendsofsymfony/elastica-bundle": "3.0.x-dev",
-                "sonata-project/admin-bundle": "~2.2.0",
-                "symfony/framework-bundle": ">=2.0,<2.4-dev"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Marmelab\\SonataElasticaBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Adapter for elastica in Sonata admin bundle ",
-            "keywords": [
-                "adapter",
-                "elastica",
-                "sonata"
-            ],
-            "time": "2014-02-18 20:57:15"
-        },
-        {
             "name": "monolog/monolog",
             "version": "1.8.0",
             "source": {
@@ -1712,58 +1638,6 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
-        },
-        {
-            "name": "ruflin/elastica",
-            "version": "v1.0.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ruflin/Elastica.git",
-                "reference": "81f339d9a813e3ba9eca6a9f06bb03f50639a1d1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ruflin/Elastica/zipball/81f339d9a813e3ba9eca6a9f06bb03f50639a1d1",
-                "reference": "81f339d9a813e3ba9eca6a9f06bb03f50639a1d1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "munkie/elasticsearch-thrift-php": "1.4.*",
-                "psr/log": "~1.0",
-                "satooshi/php-coveralls": "dev-master"
-            },
-            "suggest": {
-                "monolog/monolog": "Logging request",
-                "munkie/elasticsearch-thrift-php": "Allow using thrift transport",
-                "psr/log": "for logging"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Elastica": "lib/",
-                    "Elastica\\Test": "test/lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache 2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Ruflin",
-                    "homepage": "http://ruflin.com/"
-                }
-            ],
-            "description": "Elasticsearch Client",
-            "homepage": "http://elastica.io/",
-            "keywords": [
-                "client",
-                "search"
-            ],
-            "time": "2014-03-25 19:34:57"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -2300,16 +2174,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.0.3",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230"
+                "reference": "748c01c1144713ac0118396935d10b6ceec91b68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
-                "reference": "32edc3b0de0fdc1b10f5c4912e8677b3f411a230",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/748c01c1144713ac0118396935d10b6ceec91b68",
+                "reference": "748c01c1144713ac0118396935d10b6ceec91b68",
                 "shasum": ""
             },
             "require": {
@@ -2347,7 +2221,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2013-12-03 13:33:24"
+            "time": "2014-03-18 09:03:27"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -2524,22 +2398,22 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.5",
+            "version": "v2.3.6",
             "target-dir": "Symfony/Bundle/SwiftmailerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/SwiftmailerBundle.git",
-                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321"
+                "reference": "d272424f01656f9327198fd6c07a48499622d133"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
-                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
+                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/d272424f01656f9327198fd6c07a48499622d133",
+                "reference": "d272424f01656f9327198fd6c07a48499622d133",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "swiftmailer/swiftmailer": ">=4.2.0,<5.1-dev",
+                "swiftmailer/swiftmailer": ">=4.2.0,~5.0",
                 "symfony/swiftmailer-bridge": "~2.1"
             },
             "require-dev": {
@@ -2551,7 +2425,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -2577,7 +2451,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2013-11-21 12:29:01"
+            "time": "2014-04-03 07:36:17"
         },
         {
             "name": "symfony/symfony",
@@ -3053,12 +2927,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/MinkExtension.git",
-                "reference": "be955bcedabe680491ee68938541e786a8967f8c"
+                "reference": "abf7032c069139d9acdfcd5a21c8b8706d310360"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/MinkExtension/zipball/be955bcedabe680491ee68938541e786a8967f8c",
-                "reference": "be955bcedabe680491ee68938541e786a8967f8c",
+                "url": "https://api.github.com/repos/Behat/MinkExtension/zipball/abf7032c069139d9acdfcd5a21c8b8706d310360",
+                "reference": "abf7032c069139d9acdfcd5a21c8b8706d310360",
                 "shasum": ""
             },
             "require": {
@@ -3096,7 +2970,7 @@
                 "test",
                 "web"
             ],
-            "time": "2014-03-12 08:37:40"
+            "time": "2014-04-03 09:59:48"
         },
         {
             "name": "behat/mink-selenium2-driver",
@@ -3430,10 +3304,9 @@
         "doctrine/data-fixtures": 20,
         "knplabs/doctrine-behaviors": 20,
         "knplabs/knp-snappy-bundle": 20,
-        "friendsofsymfony/elastica-bundle": 20,
         "mopa/bootstrap-bundle": 20,
-        "marmelab/sonata-elastica-bundle": 20,
         "a2lix/translation-form-bundle": 20,
+        "incenteev/composer-parameter-handler": 20,
         "behat/behat": 20,
         "behat/mink-extension": 20,
         "phpspec/phpspec": 20
