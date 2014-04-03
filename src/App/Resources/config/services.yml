@@ -1,0 +1,42 @@
+parameters:
+    app.service.admin.country.class: App\Admin\CountryAdmin
+    app.service.admin.index.class: App\Admin\IndexAdmin
+    app.service.admin.value.class: App\Admin\ValueAdmin
+    app.service.export.exporter.class: App\Exporter\Exporter
+    app.service.export.exporter.class: App\Exporter\Exporter
+    app.controller.admin.class: App:Sonata/CRUD
+services:
+    app.service.admin.country:
+        class: %app.service.admin.country.class%
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Countries" }
+        arguments:
+            - ~
+            - App\Entity\Country
+            - ~
+    app.service.admin.index:
+         class: %app.service.admin.index.class%
+         tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Indexes", fastGrid: "true", searcher: "elastica", search_index: "app.index" }
+         arguments:
+            - ~
+            - App\Entity\Index
+            - ~
+    app.service.admin.value:
+        class: %app.service.admin.value.class%
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Values" }
+        arguments:
+            - ~
+            - App\Entity\Value
+            - ~
+    sonata.admin.exporter:
+        class: %app.service.export.exporter.class%
+        calls:
+            - [setPdfEngine, [@knp_snappy.pdf]]
+            - [setTemplateEngine, [@templating]]
+    #enabling magic __call call for translatable entities
+    #@see https://groups.google.com/forum/#!topic/symfony2/YgH5oUMsuYk
+    property_accessor:
+        class: %property_accessor.class%
+        arguments: [true]

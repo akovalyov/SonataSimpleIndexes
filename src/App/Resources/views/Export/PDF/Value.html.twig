@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table>
+    <thead>
+    <tr>
+        {% for value in data|first|keys %}
+            <th>{{ value }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    {% for values in data %}
+        <tr>
+            {% for value in values %}
+                <td>
+                    {{ value }}
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

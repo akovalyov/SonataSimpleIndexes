@@ -1,0 +1,6 @@
+# https://github.com/KnpLabs/geekweek12/wiki/Routing
+
+app_homepage:
+    pattern:      /
+    defaults:     { _controller: App:Index:index }
+    requirements: { id: '\d+' }

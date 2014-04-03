@@ -1,0 +1,48 @@
+{% extends '::base.html.twig' %}
+
+{% block headers %}
+<title>{% block title %}{% block subtitle '' %} &mdash; Sample financial app{% endblock %}</title>
+<meta name="description" content="{% block description '' %}">
+
+    <script src="/front/vendor/modernizr/modernizr.js"></script>
+{% endblock headers %}
+
+{% block stylesheets %}
+    <!-- build:css /front/styles/vendor.css -->
+    <link rel="stylesheet" href="/front/vendor/foundation/css/foundation.css"/>
+    <link rel="stylesheet" href="/front/vendor/bca-flag-sprite/css/flags.css"/>
+    <!-- endbuild -->
+
+    <!-- build:css /front/styles/app.css -->
+    <!-- endbuild -->
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row" style="max-width: 100%">
+            {% for index in indexes %}
+                <div class="large-12 columns">
+                    {% set data = [] %}
+                    {% for value in index.values %}
+                        {% set data = data|merge([{'value':value.actual, 'timestamp':value.createdAt|date('U')}]) %}
+                    {% endfor %}
+                    <div id="chart{{ loop.index }}" data-values="{{ data|json_encode }}" class="chart"
+                         data-index="<i class='flag-{{ index.country.isoCode|lower }}'></i>{{ index.name }}">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <!-- build:js /front/scripts/vendor.js -->
+    <script src="/front/vendor/jquery/dist/jquery.js"></script>
+    <script src="/front/vendor/highstock-release/highstock.src.js"></script>
+    <script src="/front/vendor/highstock-release/themes/gray.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js /front/scripts/app.js -->
+    <script src="/front/scripts/main.js"></script>
+    <!-- endbuild -->
+{% endblock %}

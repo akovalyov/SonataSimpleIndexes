@@ -1,0 +1,17 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     localhost
+    database_port:     ~
+    database_name:     ~
+    database_user:     ~
+    database_password: ~
+
+    mailer_transport:  ~
+    mailer_host:       ~
+    mailer_user:       ~
+    mailer_password:   ~
+
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
+    elasticsearch_server_url: localhost
+    elasticsearch_server_port: 9200

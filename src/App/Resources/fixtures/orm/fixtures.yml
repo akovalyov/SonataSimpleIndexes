@@ -1,0 +1,49 @@
+App\Entity\Country:
+    country0:
+        isoCode: US
+    country1:
+        isoCode: DE
+    country2:
+        isoCode: JP
+
+App\Entity\CountryTranslation:
+    country_translation0:
+        name: United State of America
+        locale: en
+        translatable: @country0
+    country_translation1:
+        name: Germany
+        locale: en
+        translatable: @country1
+    country_translation2:
+        name: Japan
+        locale: en
+        translatable: @country2
+
+App\Entity\Index:
+    index0:
+        country: @country0
+        name: S&P 500
+    index1:
+        country: @country1
+        name: DAX
+    index2:
+        country: @country2
+        name: TOPIX
+
+App\Entity\Value:
+    value{1..1500}:
+        index: @index0
+        prognosed: <randomFloat(3, 100, 999)>
+        actual: <randomFloat(3, $prognosed, 999)>
+        createdAt: <dateTimeThisDecade()>
+    value{1501..3000}:
+        index: @index1
+        prognosed: <randomFloat(3, 300, 700)>
+        actual: <randomFloat(3, $prognosed, 700)>
+        createdAt: <dateTimeThisDecade()>
+    value{3001..4500}:
+        index: @index2
+        prognosed: <randomFloat(3, 400, 600)>
+        actual: <randomFloat(3, $prognosed, 600)>
+        createdAt: <dateTimeThisDecade()>

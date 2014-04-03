@@ -1,0 +1,13 @@
+{
+  "name": "rad-bundle",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~2.1.0",
+    "bca-flag-sprite": "~1.0.0",
+    "highcharts-release": "~3.0.10",
+    "foundation": "~5.2.1",
+    "foundation-daterangepicker": "~1.0.1",
+    "highstock-release": "~1.3.10"
+  }
+}
