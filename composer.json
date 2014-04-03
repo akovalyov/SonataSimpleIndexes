@@ -40,9 +40,9 @@
         "sonata-project/doctrine-orm-admin-bundle": "~2.2",
         "sonata-project/core-bundle":               "~2.2",
 
-        "marmelab/sonata-elastica-bundle":          "2.0.*@dev",
+        "a2lix/translation-form-bundle":            "2.*@dev",
 
-        "a2lix/translation-form-bundle":            "2.*@dev"
+        "incenteev/composer-parameter-handler":     "2.1.*@dev"
     },
     "require-dev": {
         "behat/behat":                              "~3@dev",
@@ -64,19 +64,24 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ],
         "post-update-cmd": [
             "Knp\\RadBundle\\Composer\\ScriptHandler::installParametersFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ]
     },
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
-        "symfony-assets-install": "symlink"
+        "symfony-assets-install": "symlink",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
     }
 }
