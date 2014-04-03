@@ -9,7 +9,7 @@ Installation
 ============
 
 ```
-curl -sS https://getcomposer.org/installer | grep php
+curl -sS https://getcomposer.org/installer | php
 php composer.phar install
 php app/console d:d:c
 php app/console d:sc:c
