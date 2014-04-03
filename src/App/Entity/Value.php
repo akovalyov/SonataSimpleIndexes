@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Knp\DoctrineBehaviors\Model\Timestampable\Timestampable;
 
@@ -32,7 +31,7 @@ class Value
      * @var int
      * @ORM\Column(type="integer")
      */
-    private $volatility = self::VOLATILITY_LOW;
+    private $volatility;
     /**
      * Represents fixed value of index.
      *
@@ -63,6 +62,11 @@ class Value
     public function __toString()
     {
         return 'Value';
+    }
+
+    public function __construct()
+    {
+        $this->volatility = 1;
     }
 
     /**

@@ -59,34 +59,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // configure compass
-        compass: {
-            options: {
-                sassDir: '<%= paths.src %>/styles',
-                cssDir: '<%= paths.tmp %>/styles',
-                generatedImagesDir: '<%= paths.app %>/images/generated',
-                imagesDir: '<%= paths.app %>/images',
-                javascriptsDir: '<%= paths.app %>/scripts',
-                fontsDir: '<%= paths.app %>/styles/fonts',
-                importPath: '<%= paths.app %>/vendor',
-                httpImagesPath: '/front/images',
-                httpGeneratedImagesPath: '/front/images/generated',
-                httpFontsPath: '/front/styles/fonts',
-                relativeAssets: false,
-                assetCacheBuster: false
-            },
-            dist: {
-                options: {
-                    generatedImagesDir: '<%= paths.dist %>/images/generated'
-                }
-            },
-            server: {
-                options: {
-                    debugInfo: true
-                }
-            }
-        },
-
         // configure grunt copy
         copy: {
             app: {
@@ -263,7 +235,6 @@ module.exports = function (grunt) {
         'clean:app',
         'bower',
         'copy:build',
-        'compass:dist',
         'copy:styles-build',
         'useminPrepare',
         'concat',
@@ -278,7 +249,6 @@ module.exports = function (grunt) {
         'clean:app',
         'copy:app',
         'bower',
-        'compass:server',
         'copy:styles',
         'copy:layoutApp'
     ]);
